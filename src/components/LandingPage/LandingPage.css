@@ -1,0 +1,53 @@
+.heading {
+    background-image:linear-gradient(to right,rgba(175, 91, 76, 0.8), rgba(62, 180, 66, 0.8)), url("../../assets/nice_lib.jpg");
+    height: 90vh;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 74%);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.title {
+    font-size: 3rem;
+    animation: 2s ease-out 0s 1 slideFromLeft;
+}
+
+
+.sub-title {
+    font-size: 2rem;
+    font-style: italic;
+    animation: 2s ease-out 0s 1 slideFromRight;
+}
+
+.landing-page-spinner {
+    display: flex;
+    justify-content: center;
+}
+
+
+@keyframes slideFromLeft {
+    0% {
+        transform: translateX(-50%);
+    }
+
+    80% {
+        transform: translateX(10%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideFromRight {
+    0% {
+        transform: translateX(50%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
