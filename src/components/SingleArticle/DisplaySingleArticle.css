@@ -1,0 +1,11 @@
+.article {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 120px;
+}
+
+.article p {
+    font-size: 18px;
+}
