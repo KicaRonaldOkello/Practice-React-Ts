@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import store from './store';
 import { Navbar } from './components/Navbar/Navbar';
 import LandingPage from './components/LandingPage/LandingPage';
+import SingleArticle from './components/SingleArticle/SingleArticle';
 
 const Routes = () => (
     <Router>
@@ -11,6 +12,7 @@ const Routes = () => (
             <Navbar />
             <Switch>
                 <Route path="/home" component={LandingPage} exact/>
+                <Route path="/article/:slug" component={SingleArticle} />
             </Switch>
         </Provider>
     </Router>

@@ -5,6 +5,7 @@ import bodyLimit from '../../utils/helpers';
 import './DisplayArticles.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
+import { NavLink } from 'react-router-dom';
 
 interface IDisplayArticlesProps {
     articles: Articles
@@ -31,7 +32,12 @@ const DisplayArticles: React.FunctionComponent<IDisplayArticlesProps> = ({ artic
                <h4 className="card-sub-title">{article.description}</h4>
                <p className="card-sample-text">{renderHTML(bodyLimit(article.body, 100))}</p>
                </span>
-               <p className="card-button-read">Read more &#8594;</p>
+               <NavLink
+                to={`/article/${article.slug}`}
+                className="card-button-read"
+               >
+                    Read more &#8594;
+               </NavLink>
            </div>
        )
     })
