@@ -11,8 +11,8 @@ const Routes = () => (
         <Provider store={store}>
             <Navbar />
             <Switch>
-                <Route path="/home" component={LandingPage} exact/>
                 <Route path="/article/:slug" component={SingleArticle} />
+                <Route path="/" component={LandingPage} />
             </Switch>
         </Provider>
     </Router>
